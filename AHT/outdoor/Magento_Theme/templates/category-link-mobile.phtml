@@ -1,0 +1,14 @@
+<div id="category-link-mobile" class="category-link-mobile">
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('categories-link-mobile')->toHtml(); ?>
+</div>
+
+<script>
+        require(['jquery','collapsible'], function ($) {
+            $("#category-link-mobile").collapsible({
+                animate: {
+                    duration: 500,
+                    easing: 'easeOutCubic'
+                }
+            });
+        });  
+</script>

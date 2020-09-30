@@ -1,0 +1,71 @@
+//
+// target all screen
+//
+& when (@media-common = true) {
+    .block.newsletter {
+        width: 21%;
+        .title {
+            display: block !important;
+        }
+    }
+
+    .block .title{
+        h3 {
+            font-family: @font-family__base__lora;
+            color: black;
+            font-weight: 400;
+        }
+        p {
+            font-family: @font-family__base__roboto;
+            color: #333333;
+            font-weight: 400;
+        }
+    }
+    .content {
+        position: relative;
+    }
+    .form.subscribe {
+        .actions {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    .action.subscribe.primary {
+        padding-right: 0px;
+        padding-left: 0px;
+        background: white;
+        border: none;
+        margin-right: 1px;
+        margin-top: 1px;
+        height: 30px;
+        span {
+            color: black;
+            &:before {
+                content: @icon-next;
+                font-family: @icons__font-name;
+                font-size: 30px;
+                font-weight: 500;
+            }
+        }
+    }
+    .social-icon {
+        margin-top: 15px;
+        font-size: 16px;
+        a {
+            margin-right: 25px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break = @screen__m) {
+    .footer.content .block {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: @screen__s) and (max-width: @screen__m) {
+    .block .title, .social-icon {
+        text-align: center;
+    }
+}

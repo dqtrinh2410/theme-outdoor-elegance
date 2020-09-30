@@ -1,0 +1,64 @@
+@media only screen and (min-width: @screen__m) and (max-width: @screen__l) { 
+    .ves-megamenu li.level0 > a {
+        font-size: 9px !important;
+    }
+}
+//tablet >=768px
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .nav-sections {
+        background-color: white;
+        margin-bottom: 15px;
+    }
+    .ves-megamenu 
+    {
+        &>:last-child {
+            margin-right: 10px;
+        }
+        font-family: @font-family__base__roboto;
+        li.level0 > a {
+            font-size: 12px;
+            color: #000000;
+            font-weight: 600;
+            line-height: 14px;
+        }     
+        
+        li.level0:hover > a {
+            background-color: white;
+            color: @color-red;
+        }
+
+        li.active>a {
+            background-color: white;
+            color: @color-red;
+        }
+
+        .nav-item > a {
+            padding: 0;
+        }
+
+        .dropdown-menu .subgroup.level1 > a {
+            border-bottom: 2px solid black;
+            font-family: @font-family__base__roboto;
+            font-weight: 600;
+            font-size: 12px;
+            padding-left: 0px;
+        }
+    }
+    .navigation {
+        ul {
+            display: flex;
+            background-color: white;   
+            margin-top: 8px;
+        } 
+        .level0 .submenu a {
+            padding: 8px 0px;
+        }
+    }
+
+    .ves-column3 > .item-content1 > .mega-col {
+        padding-right: 30px;
+    }
+    .nav-toggle {
+        z-index: 10;
+    }
+}

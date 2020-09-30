@@ -1,0 +1,110 @@
+//
+//mixin
+//-------------------------------------------------------------------------
+.mixin-filter-options-title (@margin-left, @margin-top, @width, @height){
+    .filter-options .filter-options-item {
+        margin-left: @margin-left;
+        margin-top: @margin-top;
+        width: @width;
+        height: @height;
+    }    
+}
+
+& when (@media-common = true) {
+    .filter-options {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: @font-family-name__base__roboto;
+        a {
+            color: black;
+            display: block;
+            padding: 5px 10px;
+            &:hover {
+                background-color: @color-gray-bg-toolbar;
+                text-decoration: none;
+            }
+        }
+        .filter-options-item {
+            border: 1px solid #dddddd; 
+            position: relative;
+            z-index: 99;         
+        }
+        .filter-options-title {
+            margin: 0;
+            line-height: 44px;
+            padding-left: 10px;
+        }
+        .count {
+            color: #333333;
+        }
+        .items {
+            border-top: none;           
+        }
+        &>:first-child{
+            margin-left: 0px;
+        }  
+        .filter-options-content {
+            border: 1px solid #dddddd;
+            border-top: none;
+            margin-top: -1px;
+            background-color: white;
+        }
+    }
+    .swatch-attribute-options {
+        margin: 0;
+        padding-left: 12px;
+    }
+    .swatch-option.text {
+        padding: 0;
+    }
+    .filter-options-item.allow {
+        cursor: pointer;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break = @screen__xl) {  
+    .filter-options {
+        .filter-options-item {
+            width: 160px;
+            margin-left: 15px;
+        }
+        &>:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: @screen__l) and (max-width: @screen__xl) { 
+    .filter-options {
+        .filter-options-item {
+            width: 130px;
+            margin-left: 15px;
+        }
+        &>:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: @screen__m) and (max-width: @screen__l) { 
+    .filter-options .filter-options-item {
+        width: 30%;
+        height: 44px;
+        margin-top: 10px;
+    }
+    .filter-options {
+        justify-content: space-between;
+    }    
+}
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break = @screen__m) {
+    .mixin-filter-options-title(@margin-left: 16px, @margin-top: 15px, @width: 30%, @height: 44px);
+    .filter-options {
+        &>:nth-child(4) {
+            margin-left: 0;
+        }
+    }
+    .filter-options {
+        justify-content: space-between;
+    }
+}

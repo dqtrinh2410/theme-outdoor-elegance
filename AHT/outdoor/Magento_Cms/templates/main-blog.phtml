@@ -1,0 +1,13 @@
+<?php $questionData = [1, 2, 3, 4, 5, 6]; ?>
+<div class="main-blog">
+    <div class="blog-title">
+        <h2>Outdoor furniture blog</h2>
+    </div> 
+    <div class="list-blog-item">
+        <?php foreach ($questionData as $value): ?>
+            <div class="main-blog__item">
+                <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('outdoor-blog-'.$value)->toHtml();?>
+            </div>
+        <?php endforeach; ?>
+    </div>  
+</div>

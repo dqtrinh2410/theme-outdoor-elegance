@@ -1,0 +1,60 @@
+// all screen
+ & when (@media-common = true) { 
+    .minicart-wrapper {
+        .action.showcart:before {
+            color: @color-red;
+        }
+    
+        .action.close {
+            display: none;
+        }
+    } 
+    
+    .block-minicart {
+        font-family: @font-family__base__roboto;
+    
+        .action.primary {
+            background: @color-green;  
+            border: none; 
+        }
+    
+        .items-total {
+            font-size: 13px;
+        }
+    
+        .subtotal {
+            .label {
+                font-size: 13px;
+            }
+        }
+    
+        .items-total .count {
+            font-weight: 400;
+        }
+    }
+    
+    .minicart-items {
+        .product .toggle {
+            display: none;
+        }
+        .product-item-name a {
+            color: #222222;
+            font-weight: 700;
+            font-size: 15px;
+        }
+    
+        .product-item-details .price {
+            color: #333333;
+            font-weight: 400;
+            font-size: 15px;
+        }
+    } 
+}
+
+//target desktop
+& when (@media-common = false) { 
+    .minicart-wrapper {
+        margin-right: 45px;
+    }
+}
+

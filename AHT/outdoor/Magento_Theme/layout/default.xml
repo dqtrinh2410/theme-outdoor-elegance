@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="register-link" remove="true"/>
+        <!-- <referenceBlock name="authorization-link" remove="true"/> -->
+        <referenceBlock name="wish-list-link" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="header" remove="true" />
+        <referenceBlock name="advanced-search-link" remove="true" />
+        <referenceContainer name="header.container">
+            <container name="location.mobile" htmlTag="div" htmlClass="location-for-mobile" before="header-wrapper">
+                <block class="Magento\Cms\Block\Block" name="location.for.mobile">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">location-mobile-block</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="header.panel.wrapper">
+            <container name="left.top.header" htmlTag="div" before="-" htmlClass="left-top-header">
+                <block class="Magento\Cms\Block\Block" name="left-top-header">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">left-top-header</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="left-top-header-mobile">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">outdoor-furniture-showrooms</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="center.top.header" htmlTag="div" before="header.panel" htmlClass="center-top-header">
+                <block class="Magento\Cms\Block\Block" name="center-top-header">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">center-top-header</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="telephone">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">telephone</argument>
+                    </arguments>
+                </block>
+            </container>
+            <referenceContainer name="header.panel" htmlTag="div" htmlClass="panel header my-panel-header">
+            </referenceContainer>
+         </referenceContainer>    
+         <referenceContainer name="footer-container">
+            <container name="footer.showrooms" before="-" htmlTag="div" htmlClass="footer-showrooms">
+                <container name="footer-showrooms__item-1" htmlTag="div" htmlClass="footer-showrooms__item">
+                    <block class="Magento\Cms\Block\Block" name="footer-showroom-1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-showroom-block-1</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="footer-showrooms__item-2" htmlTag="div" htmlClass="footer-showrooms__item">
+                    <block class="Magento\Cms\Block\Block" name="footer-showroom-2">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-showroom-block-2</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="footer-showrooms__item-3" htmlTag="div" htmlClass="footer-showrooms__item">
+                    <block class="Magento\Cms\Block\Block" name="footer-showroom-3">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-showroom-block-3</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="footer-showrooms__item-4" htmlTag="div" htmlClass="footer-showrooms__item">
+                    <block class="Magento\Cms\Block\Block" name="footer-showroom-4">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-showroom-block-4</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="footer-showrooms__item-5" htmlTag="div" htmlClass="footer-showrooms__item">
+                    <block class="Magento\Cms\Block\Block" name="footer-showroom-5">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">footer-showroom-block-5</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+            <container name="footer.banner" htmlTag="div" htmlClass="footer-banner" after="footer.showrooms">
+                <block class="Magento\Cms\Block\Block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer-banner</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="top.footer" htmlTag="div" htmlClass="top-footer" after="footer.banner">
+                <container htmlTag="div">
+                    <container name="top-footer-item-1" htmlTag="div" htmlClass="top-footer__item">
+                        <block class="Magento\Cms\Block\Block">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">top-footer-1</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="top-footer-item-2" htmlTag="div" htmlClass="top-footer__item">
+                        <block class="Magento\Cms\Block\Block">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">top-footer-2</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="top-footer-item-3" htmlTag="div" htmlClass="top-footer__item">
+                        <block class="Magento\Cms\Block\Block">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">top-footer-3</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="top-footer-item-4" htmlTag="div" htmlClass="top-footer__item">
+                        <block class="Magento\Cms\Block\Block">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">top-footer-4</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                </container>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="footer"> 
+            <container name="middle.footer" htmlClass="middle-footer" htmlTag="div" before="-">  
+                <container name="categories.link" htmlTag="div" htmlClass="categories-link">
+                    <block class="Magento\Cms\Block\Block">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">categories-link</argument>
+                        </arguments>
+                    </block>
+                </container> 
+                <container name="about.outdoor" htmlTag="div" htmlClass="about-outdoor" before="form.subscribe">
+                    <block class="Magento\Cms\Block\Block">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">about-outdoor</argument>
+                        </arguments>
+                    </block>
+                </container> 
+                <container name="policies" htmlTag="div" htmlClass="policies" after="about.outdoor">
+                    <block class="Magento\Cms\Block\Block">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">policies</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <block name="categories-link-mobile" class="Magento\Framework\View\Element\Template" template="Magento_Theme::category-link-mobile.phtml" />
+                <block name="about-outdoor-mobile" class="Magento\Framework\View\Element\Template" template="Magento_Theme::about-m.phtml" />
+                <block name="policies-mobile" class="Magento\Framework\View\Element\Template" template="Magento_Theme::policies-mobile.phtml" />
+            </container>
+            <container name="bottom.footer" htmlTag="div" htmlClass="bottom-footer" after="-">          
+                <container name="payment-method" htmlTag="div" htmlClass="payment-method">
+                    <block class="Magento\Cms\Block\Block">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">payment-method</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>                  
+        </referenceContainer>
+        <move element="form.subscribe" destination="middle.footer" after="policies"/>     
+        <move element="copyright" destination="bottom.footer" before="-"/>         
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+    </body>
+</page>

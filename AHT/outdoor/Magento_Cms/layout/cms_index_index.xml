@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="home.page.main.banner.section" htmlTag="section" htmlClass="home-page-main-banner-section" before="main.content">             
+                <block class="Magento\Framework\View\Element\Template" name="main.slide" template="Magento_Cms::main-slide-banner.phtml" />
+            </container>
+        </referenceContainer>    
+        <referenceContainer name="main">
+            <block class="Magento\Framework\View\Element\Template" name="main.banner.two.items" before="-" template="Magento_Cms::main-banner-two-items.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="main.reason.to.buy" after="main.banner.two.items" template="Magento_Cms::main-reason-to-buy.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="main.banner.three.items" after="main.reason.to.buy" template="Magento_Cms::main-banner-three-items.phtml" />
+            <!-- <block class="Magento\Framework\View\Element\Template" name="main.banner.image.video" after="main.banner.three.items" template="Magento_Cms::main-banner-image-video.phtml" /> -->
+            <block class="Magento\Framework\View\Element\Template" name="best.seller" after="main.banner.image.video" template="Magento_Cms::best-seller.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="new.arrival" after="best.seller" template="Magento_Cms::new-arrival.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="main.slide.instagram" after="new.arrival" template="Magento_Cms::main-slide-instagram.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="main.blog" after="main.slide.instagram" template="Magento_Cms::main-blog.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="main.review.service" after="main.blog" template="Magento_Cms::review-service.phtml" />
+        </referenceContainer>
+    </body>
+</page>

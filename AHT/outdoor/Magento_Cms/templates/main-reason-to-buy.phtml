@@ -1,0 +1,35 @@
+<div class="reason-to-buy">
+    <div class="reason-to-buy__item">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('reason-to-buy-1')->toHtml(); ?>
+    </div>
+    <div class="reason-to-buy__item">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('reason-to-buy-2')->toHtml(); ?>
+    </div>
+    <div class="reason-to-buy__item">
+        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('reason-to-buy-3')->toHtml(); ?>
+    </div>
+</div>
+
+<script type="text/javascript">
+    require(['jquery', 'jquery/ui', 'slick'], function($) {
+	    $(document).ready(function() {
+	        $(".reason-to-buy").slick({
+                dots: false,
+	            infinite: true,
+	            slidesToShow: 3,
+                slidesToScroll: 0,
+                arrows: false,
+                swipeToSlide: true,
+                responsive: [
+                    {
+                        breakpoint: 767.99,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
+            });
+        });
+    })
+</script>

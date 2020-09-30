@@ -1,0 +1,50 @@
+<div class="main-instagram-slide">
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('outdoor-with-instagram-block')->toHtml(); ?>
+</div>
+
+<script type="text/javascript">
+    require(['jquery', 'jquery/ui', 'slick'], function($) {
+	    $(document).ready(function() {
+            $(".regular").slick({
+                dots: false,
+	            infinite: true,
+	            slidesToShow: 5,
+                slidesToScroll: 1,
+                arrows: true,
+                swipeToSlide: true,
+                responsive: [
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 2
+                        }
+                    },
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 3
+                        }
+                    },
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 3,
+                        arrows: true,
+                        }
+                    },
+                    {
+                    breakpoint: 1440,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 5,
+                        arrows: true,
+                        }
+                    }
+                ]
+	        });
+	    });
+	});
+</script>

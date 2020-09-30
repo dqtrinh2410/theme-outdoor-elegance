@@ -1,0 +1,14 @@
+<div id="policies-mobile" class="policies-mobile">
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('policies-mobile')->toHtml(); ?>
+</div>
+
+<script>
+        require(['jquery','collapsible'], function ($) {
+            $("#policies-mobile").collapsible({
+                animate: {
+                    duration: 500,
+                    easing: 'easeOutCubic'
+                }
+            });
+        });   
+</script>

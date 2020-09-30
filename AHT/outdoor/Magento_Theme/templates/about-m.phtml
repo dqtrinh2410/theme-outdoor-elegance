@@ -1,0 +1,14 @@
+<div id="about-outdoor-mobile" class="about-outdoor-mobile">
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('about-outdoor-mobile')->toHtml(); ?>
+</div>
+
+<script>
+        require(['jquery','collapsible'], function ($) {
+            $("#about-outdoor-mobile").collapsible({
+                animate: {
+                    duration: 500,
+                    easing: 'easeOutCubic'
+                }
+            });
+        }); 
+</script>
