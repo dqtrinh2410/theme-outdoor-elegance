@@ -11,6 +11,52 @@
     <body>
         <referenceBlock name="product.info.review" remove="true" />
         <referenceBlock name="product.info.extrahint" remove="true"/>
-        <referenceBlock name="product.info.additional" remove="true"/>     
+        <referenceBlock name="product.info.additional" remove="true"/> 
+        <referenceContainer name="product.info.main">
+            <!-- <block class="Magento\Framework\View\Element\Template" name="page.main.title-custom" template="Magento_Theme::name.phtml" before="-"/> -->
+            <!-- <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.details" template="product/view/descrip.phtml" after="-" /> -->
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.description-custom" as="description" template="Magento_Catalog::product/view/attribute.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getDescription</argument>
+                    <argument name="at_code" xsi:type="string">description</argument>
+                    <argument name="css_class" xsi:type="string">description</argument>
+                    <argument name="at_label" xsi:type="string">none</argument>
+                    <argument name="title" translate="true" xsi:type="string">Details</argument>
+                    <argument name="sort_order" xsi:type="string">10</argument>
+                </arguments>               
+            </block>
+            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.include" as="additional" template="Magento_Catalog::product/view/product-include.phtml">
+                <arguments>
+                    <!-- <argument translate="true" name="title" xsi:type="string">This product includes</argument> -->
+                    <argument name="title" translate="true" xsi:type="string">Details</argument>
+                    <argument name="sort_order" xsi:type="string">20</argument>
+                </arguments>
+            </block>
+            <container name="shipping-detail-product" htmlClass="shipping-detail-product" htmlTag="div">
+                <block class="Magento\Cms\Block\Block" name="royal.block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">royal-block</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="unbrella.block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">sunbrela-block</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="shipping.block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">shipping-block</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>  
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.descript" template="Magento_Catalog::product/view/descrip.phtml" group="detailed_info">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Description</argument>
+                    <argument name="sort_order" xsi:type="string">1</argument>
+                </arguments>
+            </block>
+        </referenceBlock> 
     </body>
 </page>

@@ -166,8 +166,11 @@
             </container>                  
         </referenceContainer>
         <move element="form.subscribe" destination="middle.footer" after="policies"/>     
-        <move element="copyright" destination="bottom.footer" before="-"/>         
+        <move element="copyright" destination="bottom.footer" before="-"/>       
         <referenceBlock name="footer_links" remove="true"/>
         <referenceBlock name="report.bugs" remove="true"/>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Framework\View\Element\Template" name="page.main.title-custom" template="Magento_Theme::name.phtml" before="-"/>
+        </referenceContainer>
     </body>
 </page>

@@ -61,7 +61,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                         <?= $productImage->toHtml() ?>
                     </a>
                     <div class="product details product-item-details">
-                        <span class="product-more-colours">More colours available</span>
+                        <p class="product-more-colours">More colours available</p>
                         <?php
                             $_productNameStripped = $block->stripTags($_product->getName(), null, true);
                         ?>            
@@ -73,7 +73,6 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                         </strong>
                         <?= $block->getReviewsSummaryHtml($_product, $templateType) ?>
                         <?= /* @noEscape */ $block->getProductPrice($_product) ?>
-                        
 
                         <div class="product-item-inner">
                             <div class="product actions product-item-actions"<?= strpos($pos, $viewMode . '-actions') ? $block->escapeHtmlAttr($position) : '' ?>>

@@ -11,6 +11,8 @@
     }
     .ves-megamenu 
     {
+        border-bottom: 1px solid @color-quiet-gray;
+        padding-bottom: 15px !important;
         &>:last-child {
             margin-right: 10px;
         }
@@ -21,7 +23,9 @@
             font-weight: 600;
             line-height: 14px;
         }     
-        
+        li.active > a {
+            color: black !important;
+        }
         li.level0:hover > a {
             background-color: white;
             color: @color-red;
