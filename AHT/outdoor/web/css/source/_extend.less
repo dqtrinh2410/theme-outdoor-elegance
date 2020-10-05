@@ -32,11 +32,6 @@
     }
 }
 
-//
-// screen
-//----------------------------------------------------------------------------------
-// @screen__m: 992px;
-
 //  Fonts
 @font-family-name__base__roboto: 'Roboto', sans-serif;
 @font-family-name__base__lora: 'Lora', serif;
@@ -44,74 +39,72 @@
 @font-family__base__roboto: @font-family-name__base__roboto, @font-family__sans-serif;
 @font-family__base__lora: @font-family-name__base__lora, @font-family__serif;
 @font-family__base__maket: @font-family-name__base__maket, @font-family__sans-serif;
-@sidebar__background-color: red;
+//@sidebar__background-color: red;
 
-// & when (@media-common = true) {
-//     // roboto
-//     .lib-font-face(
-//         @family-name: @font-family-name__base__roboto,
-//         @font-path: '@{baseDir}fonts/roboto/light/opensans-300',
-//         @font-weight: 300,
-//         @font-style: normal
-//     );
+.lib-font-face(
+   @family-name: @font-family-name__base__roboto,
+   @font-path: '@{baseDir}fonts/fonts/roboto/light/opensans-300',
+   @font-weight: 300,
+   @font-style: normal
+);
 
-//     .lib-font-face(
-//         @family-name: @font-family-name__base__roboto,
-//         @font-path: '@{baseDir}fonts/roboto/regular/Roboto-Regular',
-//         @font-weight: 400,
-//         @font-style: normal
-//     );
+.lib-font-face(
+   @family-name: @font-family-name__base__roboto,
+   @font-path: '@{baseDir}fonts/fonts/roboto/regular/Roboto-Regular',
+   @font-weight: 400,
+   @font-style: normal
+);
 
-//     .lib-font-face(
-//         @family-name: @font-family-name__base__roboto,
-//         @font-path: '@{baseDir}fonts/roboto/semibold/Roboto-BoldItalic',
-//         @font-weight: 600,
-//         @font-style: normal
-//     );
+.lib-font-face(
+   @family-name: @font-family-name__base__roboto,
+   @font-path: '@{baseDir}fonts/fonts/roboto/semibold/Roboto-BoldItalic',
+   @font-weight: 600,
+   @font-style: normal
+);
 
-//     .lib-font-face(
-//         @family-name: @font-family-name__base__roboto,
-//         @font-path: '@{baseDir}fonts/lora/bold/Roboto-Bold',
-//         @font-weight: 700,
-//         @font-style: normal
-//     );
+.lib-font-face(
+   @family-name: @font-family-name__base__roboto,
+   @font-path: '@{baseDir}fonts/fonts/lora/bold/Roboto-Bold',
+   @font-weight: 700,
+   @font-style: normal
+);
 
-//     // lora
-//     .lib-font-face(
-//         @family-name: @font-family-name__base__lora,
-//         @font-path: '@{baseDir}fonts/lora/bold/Lora-Bold',
-//         @font-weight: 700,
-//         @font-style: normal
-//     );
+// lora
+.lib-font-face(
+   @family-name: @font-family-name__base__lora,
+   @font-path: '@{baseDir}fonts/fonts/lora/bold/Lora-Bold',
+   @font-weight: 700,
+   @font-style: normal
+);
 
-//     .lib-font-face(
-//         @family-name: @font-family-name__base__lora,
-//         @font-path: '@{baseDir}fonts/lora/light/Lora-BoldItalic',
-//         @font-weight: 300,
-//         @font-style: normal
-//     );
+.lib-font-face(
+   @family-name: @font-family-name__base__lora,
+   @font-path: '@{baseDir}fonts/fonts/lora/light/Lora-BoldItalic',
+   @font-weight: 300,
+   @font-style: normal
+);
 
-//     .lib-font-face(
-//         @family-name: @font-family-name__base__lora,
-//         @font-path: '@{baseDir}fonts/lora/regular/Lora-Regular',
-//         @font-weight: 400,
-//         @font-style: normal
-//     );
+.lib-font-face(
+   @family-name: @font-family-name__base__lora,
+   @font-path: '@{baseDir}fonts/fonts/lora/regular/Lora-Regular',
+   @font-weight: 400,
+   @font-style: normal
+);
 
-//     .lib-font-face(
-//         @family-name: @font-family-name__base__lora,
-//         @font-path: '@{baseDir}fonts/lora/semibold/Lora-SemiBold',
-//         @font-weight: 600,
-//         @font-style: normal
-//     );
+.lib-font-face(
+   @family-name: @font-family-name__base__lora,
+   @font-path: '@{baseDir}fonts/fonts/lora/semibold/Lora-SemiBold',
+   @font-weight: 600,
+   @font-style: normal
+);
 
-//     .lib-font-face(
-//         @family-name:  @font-family-name__base__maket,
-//         @font-path: '@{baseDir}fonts/market/bold/marketweb',
-//         @font-weight: 600,
-//         @font-style: normal
-//     );
-//}
+.lib-font-face(
+   @family-name:  @font-family-name__base__maket,
+   @font-path: '@{baseDir}fonts/fonts/market/bold/marketweb',
+   @font-weight: 600,
+   @font-style: normal
+);
+
 
 /* cyrillic-ext */
 @font-face {
@@ -464,7 +457,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.slick-prev:before { 
+.slick-prev:before {
   content: '\e617';
   font-family: 'icons-blank-theme';
   color: black;
@@ -475,7 +468,7 @@
   opacity: 1;
 }
 
-.slick-next:before {     
+.slick-next:before {
   content: '\e608';
   font-family: 'icons-blank-theme';
   color: black;
@@ -492,13 +485,21 @@
   width: 50px;
   height: 50px;
   z-index: 2;
+  border: none;
+  &:focus {
+    border: none;
+  }
 }
 .slick-next {
+  &:focus {
+    border: none;
+  }
   top: 28%;
   width: 50px;
   height: 50px;
   z-index: 2;
   right: -5px;
+  border: none;
 }
 
 .slick-prev:hover:after,

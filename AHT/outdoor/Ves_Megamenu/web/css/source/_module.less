@@ -1,4 +1,4 @@
-@media only screen and (min-width: @screen__m) and (max-width: @screen__l) { 
+@media only screen and (min-width: @screen__m) and (max-width: @screen__l) {
     .ves-megamenu li.level0 > a {
         font-size: 9px !important;
     }
@@ -9,7 +9,7 @@
         background-color: white;
         margin-bottom: 15px;
     }
-    .ves-megamenu 
+    .ves-megamenu
     {
         border-bottom: 1px solid @color-quiet-gray;
         padding-bottom: 15px !important;
@@ -22,7 +22,7 @@
             color: #000000;
             font-weight: 600;
             line-height: 14px;
-        }     
+        }
         li.active > a {
             color: black !important;
         }
@@ -51,9 +51,9 @@
     .navigation {
         ul {
             display: flex;
-            background-color: white;   
+            background-color: white;
             margin-top: 8px;
-        } 
+        }
         .level0 .submenu a {
             padding: 8px 0px;
         }
@@ -62,6 +62,9 @@
     .ves-column3 > .item-content1 > .mega-col {
         padding-right: 30px;
     }
+}
+
+& when (@media-common = true) {
     .nav-toggle {
         z-index: 10;
     }
